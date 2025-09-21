@@ -22,9 +22,19 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 
 ###  📸 **Our Model Processed video**
 
-**INPUT Video**
+**Video Sample 1**
+1. https://github.com/user-attachments/assets/36a95f98-360f-4f05-bc0c-26c1e113cf71
+2. https://github.com/user-attachments/assets/b826aa4c-15b2-4b17-8f9c-007518d1c865
 
-**OUTPUT Video**
+**Video Sample 2**
+
+1. https://github.com/user-attachments/assets/1646c0f8-4f94-4118-a9fe-6ad494743870
+2. https://github.com/user-attachments/assets/36a637cb-74ae-459e-879f-0f6c084cf879
+
+**Video Sample 3**
+
+1. https://github.com/user-attachments/assets/007d550a-94f6-4625-9de2-960fc4babbee
+2. https://github.com/user-attachments/assets/501b1b46-3af0-43b1-af01-afba683f056d
 
 ### 💡 **The Idea: From Seeing to Understanding**
 

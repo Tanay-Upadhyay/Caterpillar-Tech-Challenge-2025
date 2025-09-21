@@ -12,6 +12,7 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 
 *   [💡 The Idea: From Seeing to Understanding](#-the-idea-from-seeing-to-understanding)
 *   [💼 Why This Project Matters: Solving Critical Safety Gaps](#-why-this-project-matters-solving-critical-safety-gaps)
+*   [📸 Video Demo ]
 *   [🚀 Tech Stack & Architecture](#-tech-stack--architecture)
 *   [✨ Key Features](#-key-features)
 *   [🖼️ Visual Showcase: The LiteDepth System in Action](#️-visual-showcase-the-litedepth-system-in-action)

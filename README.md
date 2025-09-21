@@ -12,7 +12,6 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 
 *   [💡 The Idea: From Seeing to Understanding](#-the-idea-from-seeing-to-understanding)
 *   [💼 Why This Project Matters: Solving Critical Safety Gaps](#-why-this-project-matters-solving-critical-safety-gaps)
-*   [📸 Video Demo ]
 *   [🚀 Tech Stack & Architecture](#-tech-stack--architecture)
 *   [✨ Key Features](#-key-features)
 *   [🖼️ Visual Showcase: The LiteDepth System in Action](#️-visual-showcase-the-litedepth-system-in-action)
@@ -20,6 +19,12 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
     *   [Why YOLOv11n (Initially yolov8s) + SCDepthV3?](#why-yolov11n--scdepthv3)
     *   [The Fusion Algorithm](#the-fusion-algorithm)
 *   [🔮 Future Improvements](#-future-improvements)
+
+###  📸 **Our Model Processed video**
+
+**INPUT Video**
+
+**OUTPUT Video**
 
 ### 💡 **The Idea: From Seeing to Understanding**
 

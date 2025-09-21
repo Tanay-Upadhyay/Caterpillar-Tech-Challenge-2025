@@ -36,6 +36,8 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 1. https://github.com/user-attachments/assets/007d550a-94f6-4625-9de2-960fc4babbee
 2. https://github.com/user-attachments/assets/501b1b46-3af0-43b1-af01-afba683f056d
 
+**Snapshot Frontend**
+
 ### 💡 **The Idea: From Seeing to Understanding**
 
 Standard cameras on heavy machinery are like eyes without a brain. They show an operator a 2D picture, but they don't provide the critical context needed for safety: *How far away is that person? Is that vehicle a potential collision risk?* This is reactive vision.

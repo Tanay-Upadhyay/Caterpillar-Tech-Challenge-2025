@@ -15,12 +15,8 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 *   [🚀 Tech Stack & Architecture](#-tech-stack--architecture)
 *   [✨ Key Features](#-key-features)
 *   [🖼️ Visual Showcase: The LiteDepth System in Action](#️-visual-showcase-the-litedepth-system-in-action)
-*   [📂 Project Structure](#-project-structure)
-*   [🏁 Getting Started](#-getting-started)
-    *   [Prerequisites](#prerequisites)
-    *   [Installation & Setup](#installation--setup)
 *   [🤖 The AI Perception Core](#-the-ai-perception-core)
-    *   [Why YOLOv11n + SCDepthV3?](#why-yolov11n--scdepthv3)
+    *   [Why YOLOv11n (Initially yolov8s) + SCDepthV3?](#why-yolov11n--scdepthv3)
     *   [The Fusion Algorithm](#the-fusion-algorithm)
 *   [🔮 Future Improvements](#-future-improvements)
 
@@ -82,63 +78,7 @@ The final output provides a comprehensive and intuitive understanding of the mac
 |  |  |  |
 | *The complete operator interface, showing the AR and BEV displays side-by-side.* | *Clear, colored bounding boxes provide immediate object identification and threat level.* | *The BEV shows object position, threat, motion history, and spatial context.* |
 
-### 📂 **Project Structure**
 
-The repository is organized logically to separate model files, core logic, and utility scripts.
-
-```
-LiteDepth-Caterpillar/
-│
-├── 📂 models/                # Contains the optimized model files (e.g., .onnx or other formats)
-│   ├── yolov11n.onnx
-│   └── scdepthv3.onnx
-│
-├── 📂 utils/                 # Utility scripts for things like calibration or color definitions
-│   └── calibration.py
-│
-├── 📄 main.py                # The main application script that runs the entire pipeline
-├── 📄 requirements.txt      # Python dependencies for the project
-├── 📄 README.md              # You are here!
-└── 📄 .gitignore             # Specifies files to ignore for Git
-```
-
-### 🏁 **Getting Started**
-
-Follow these steps to get the LiteDepth system running.
-
-#### **Prerequisites**
-
-*   Python 3.8+
-*   A clone of this repository
-*   Hardware:
-    *   Raspberry Pi 5
-    *   Hailo-8L AI Accelerator (with drivers and SDK installed)
-    *   A compatible camera (e.g., Raspberry Pi Camera Module)
-
-#### **Installation & Setup**
-
-1.  **Clone the Repository**
-    ```bash
-    git clone https://github.com/your-username/LiteDepth-Caterpillar.git
-    cd LiteDepth-Caterpillar
-    ```
-
-2.  **Set up a Virtual Environment (Recommended)**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-
-3.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the Application**
-    Ensure your camera is connected and the Hailo drivers are active.
-    ```bash
-    python main.py
-    ```
 
 ### 🤖 **The AI Perception Core**
 

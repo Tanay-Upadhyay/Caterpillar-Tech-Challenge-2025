@@ -37,6 +37,7 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 2. https://github.com/user-attachments/assets/501b1b46-3af0-43b1-af01-afba683f056d
 
 **Snapshot Frontend**
+<img width="1855" height="902" alt="Screenshot 2025-09-22 010639" src="https://github.com/user-attachments/assets/d10fd0e8-bfba-4092-bfd3-1ddcd3def2bd" />
 
 ### 💡 **The Idea: From Seeing to Understanding**
 

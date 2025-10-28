@@ -1,5 +1,4 @@
 ### **👁️ LiteDepth: Real-Time 3D Perception for Industrial Safety**
-
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-27A4DE?style=for-the-badge&logo=opencv&logoColor=white)
@@ -9,7 +8,6 @@
 An end-to-end edge AI perception system that enhances operator safety by fusing real-time object detection with metric depth estimation, all running on a low-power device. This project was a finalist at the **Caterpillar Hackathon**.
 
 ### 📜 **Table of Contents**
-
 *   [💡 The Idea: From Seeing to Understanding](#-the-idea-from-seeing-to-understanding)
 *   [💼 Why This Project Matters: Solving Critical Safety Gaps](#-why-this-project-matters-solving-critical-safety-gaps)
 *   [🚀 Tech Stack & Architecture](#-tech-stack--architecture)
@@ -21,18 +19,15 @@ An end-to-end edge AI perception system that enhances operator safety by fusing 
 *   [🔮 Future Improvements](#-future-improvements)
 
 ###  📸 **Our Model Processed video**
-
 **Video Sample 1**
 1. https://github.com/user-attachments/assets/36a95f98-360f-4f05-bc0c-26c1e113cf71
 2. https://github.com/user-attachments/assets/b826aa4c-15b2-4b17-8f9c-007518d1c865
 
 **Video Sample 2**
-
 1. https://github.com/user-attachments/assets/1646c0f8-4f94-4118-a9fe-6ad494743870
 2. https://github.com/user-attachments/assets/36a637cb-74ae-459e-879f-0f6c084cf879
 
 **Video Sample 3**
-
 1. https://github.com/user-attachments/assets/007d550a-94f6-4625-9de2-960fc4babbee
 2. https://github.com/user-attachments/assets/501b1b46-3af0-43b1-af01-afba683f056d
 
@@ -53,21 +48,18 @@ On a busy industrial site, blind spots and misjudged distances can have catastro
 
 *   **Eliminates Distance Ambiguity:** By providing real-world, metric distance to any detected object, the system removes the guesswork for operators, allowing for more confident and safer maneuvering.
 *   **Reduces Cognitive Load:** The dual-display (AR + BEV) provides clear, glanceable alerts. An operator doesn't need to interpret a complex scene; they are immediately shown what matters, where it is, and if it's a threat.
-*   **Prevents Accidents:** Proactive alerts for objects in critical safety zones give operators precious seconds to react, preventing potential collisions with personnel or other equipment.
-*   **Demonstrates High-Performance Edge AI:** This project isn't just a cloud-based concept. It's a fully functional system that proves complex, multi-model AI pipelines can be deployed effectively on low-cost, power-efficient hardware, making advanced safety features accessible.
+*   **Enables Proactive Intervention:** Potential collisions can be flagged before they occur, providing critical seconds to react.
+*   **Scalable and Deployable:** Running entirely on edge hardware means this system can be retrofitted onto any existing machine without requiring cloud connectivity.
 
 ### 🚀 **Tech Stack & Architecture**
 
-This system is built with a focus on performance, leveraging state-of-the-art open-source technologies.
-
-| Technology | Role in Project |
-| :--- | :--- |
-| **Python** | 🐍 **The Core Logic:** The language used for the entire data pipeline, model integration, and visualization. |
-| **PyTorch** | 🔥 **AI Framework:** The backbone for running both our object detection and depth estimation models. |
-| **OpenCV** | 📸 **Computer Vision & Visualization:** The workhorse for video capture, image processing, and drawing all AR and BEV overlays. |
-| **NumPy** | 🧮 **Numerical Operations:** Provides the high-performance array structures for handling images and depth maps efficiently. |
-| **Raspberry Pi 5** | 🍓 **Edge Compute Platform:** The low-cost, powerful single-board computer that hosts our application. |
-| **Hailo-8L AI Accelerator** | 🧠 **AI Inference Engine:** The specialized hardware that offloads all heavy neural network computations, enabling real-time performance. |
+| Component | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Hardware** | Raspberry Pi 5 + Hailo AI Accelerator | The edge compute platform, providing the horsepower to run two neural networks in parallel. |
+| **Backend Language** | Python | Rapid prototyping and excellent support for ML libraries. |
+| **Deep Learning Framework** | PyTorch | Powers both the YOLO and depth models. |
+| **Computer Vision Library** | OpenCV | Real-time image processing, drawing, and video I/O. |
+| **Numerical Computation** | NumPy | High-speed array manipulation for the depth map. |
 | **YOLOv11n** | 🎯 **Object Detection Model:** A highly efficient model, fine-tuned to identify worksite objects like people and vehicles. |
 | **SCDepthV3** | 📏 **Depth Estimation Model:** A state-of-the-art model that generates a dense, metric depth map from a single 2D image. |
 
@@ -75,7 +67,7 @@ This system is built with a focus on performance, leveraging state-of-the-art op
 
 The data flows through the system in a high-speed, parallel loop:
 
- *(Note: Replace with an actual image of your Mermaid diagram)*
+![System Architecture Diagram](Caterpillar Architecture diagram.jpg)
 
 ### ✨ **Key Features**
 
@@ -90,14 +82,13 @@ The data flows through the system in a high-speed, parallel loop:
 
 The final output provides a comprehensive and intuitive understanding of the machine's surroundings.
 
-*(Insert your best screenshots/GIFs here. For example:)*
+![Output Image 1](Caterpillar output image 1.jpg)
+![Output Image 2](Caterpillar output image 2.jpg)
 
 | Live Combined View | AR View Detail | BEV Tactical Display |
 | :---: | :---: | :---: |
 |  |  |  |
 | *The complete operator interface, showing the AR and BEV displays side-by-side.* | *Clear, colored bounding boxes provide immediate object identification and threat level.* | *The BEV shows object position, threat, motion history, and spatial context.* |
-
-
 
 ### 🤖 **The AI Perception Core**
 
@@ -111,6 +102,7 @@ This model pairing was a deliberate engineering choice to maximize performance o
 #### **The Fusion Algorithm**
 
 The "magic" of LiteDepth is how it combines the outputs of these two models in real-time.
+
 1.  **Parallel Inference:** The system runs both models simultaneously to minimize latency.
 2.  **High-Speed Lookup:** For every object YOLO detects, we take its representative point (the bottom-center for ground objects).
 3.  **Direct Data Extraction:** We use the coordinates of this point to perform a direct, computationally cheap lookup into the NumPy array generated by SCDepthV3. This instantly gives us the object's distance. This method avoids any complex calculations and is key to maintaining our high frame rate.

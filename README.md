@@ -67,7 +67,7 @@ On a busy industrial site, blind spots and misjudged distances can have catastro
 
 The data flows through the system in a high-speed, parallel loop:
 
-![System Architecture Diagram](Caterpillar Architecture diagram.jpg)
+<img src="Caterpillar%20Architecture%20diagram.jpg" width="600"/>
 
 ### ✨ **Key Features**
 
@@ -82,8 +82,8 @@ The data flows through the system in a high-speed, parallel loop:
 
 The final output provides a comprehensive and intuitive understanding of the machine's surroundings.
 
-![Output Image 1](Caterpillar output image 1.jpg)
-![Output Image 2](Caterpillar output image 2.jpg)
+<img src="Caterpillar%20output%20image%201.jpg" width="400"/>
+<img src="Caterpillar%20output%20image%202.jpg" width="400"/>
 
 | Live Combined View | AR View Detail | BEV Tactical Display |
 | :---: | :---: | :---: |
